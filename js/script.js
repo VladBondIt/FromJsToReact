@@ -1,8 +1,26 @@
-"use struct";
+"use strict";
 
-const obj = {
-    a: 20,
+
+let numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?'),
+    firstFilm = prompt('Один из последних просмотренных фильмов?', ''),
+    firstRating = prompt('На сколько оцените его?', ''),
+    secondFilm = prompt('Один из последних просмотренных фильмов?', ''),
+    secondRating = prompt('На сколько оцените его?', '');
+
+
+let personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: true,
 };
 
-obj.a = 10;
-console.log(obj.a);
+personalMovieDB.movies[firstFilm] = firstRating;
+personalMovieDB.movies[secondFilm] = secondRating;
+
+console.log(personalMovieDB);
+
+
+
+
