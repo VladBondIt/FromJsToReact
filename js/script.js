@@ -24,7 +24,7 @@ for (let i = 0; i < 2; i++) {
         i--;
     }
 }
-let i = 0;
+// let i = 0;
 // do {
 //     let nameFilm = prompt('Один из последних просмотренных фильмов?');
 //     let nameRating = prompt('На сколько оцените его?');
