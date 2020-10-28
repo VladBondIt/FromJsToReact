@@ -8,3 +8,18 @@ $maxWidth: 1280;
     $maxWidth: $maxWidth - 320;
     font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
 }
+
+.wrapper {
+}
+.header {
+    min-height: 300px;
+    background-color: rgb(228, 172, 172);
+}
+.main {
+    min-height: 250px;
+    background-color: rgb(159, 219, 177);
+}
+.footer {
+    min-height: 250px;
+    background-color: rgb(162, 107, 212);
+}

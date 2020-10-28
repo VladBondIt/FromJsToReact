@@ -89,3 +89,17 @@ h6 {
 }
 
 /*--------------------*/
+.header {
+  min-height: 300px;
+  background-color: #e4acac;
+}
+
+.main {
+  min-height: 250px;
+  background-color: #9fdbb1;
+}
+
+.footer {
+  min-height: 250px;
+  background-color: #a26bd4;
+}
