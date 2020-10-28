@@ -1,3 +1,8 @@
-'use struct';
+"use struct";
 
-let x = 2;
+const obj = {
+    a: 20,
+};
+
+obj.a = 10;
+console.log(obj.a);
