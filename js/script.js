@@ -12,7 +12,7 @@ function start() {
     }
 }
 
-start();
+
 
 
 let personalMovieDB = {
@@ -40,7 +40,7 @@ function checkUserMovies() {
     }
 }
 
-checkUserMovies();
+
 
 
 // let i = 0;
@@ -86,7 +86,7 @@ function userLevel() {
     }
 }
 
-userLevel();
+
 
 function showMyDB(hidden) {
     if (!hidden) {
@@ -102,5 +102,7 @@ function writeYourGenres() {
     }
 }
 
-
-writeYourGenres();
+// userLevel();
+// writeYourGenres();
+// checkUserMovies();
+// start();
