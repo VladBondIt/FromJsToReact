@@ -46,3 +46,11 @@ const flat = data.reduce((prev, item) => {
 });
 
 console.log(flat);
+
+
+const arr = [2, 13, 26, 8, 10];
+arr.sort(compareNum);
+
+function compareNum(a, b) {
+    return a - b;
+}
