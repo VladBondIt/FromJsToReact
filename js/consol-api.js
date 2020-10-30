@@ -57,7 +57,7 @@ let personalMovieDB = {
     },
     writeYourGenres() {
         for (let i = 1; i < 2; i++) {
-            let userGenre = prompt(`Ваш любимый жанр под номером через запятую`);
+            let userGenre = prompt(`Ваш любимый жанр через запятую`);
 
             // if (userGenre == null || userGenre == '') {
             //     console.log('Вы ввели не коректные данные');
@@ -69,7 +69,7 @@ let personalMovieDB = {
                 console.log('Вы ввели не коректные данные');
                 i--;
             } else {
-                this.genres = userGenre.split(', ');
+                this.genres = userGenre.split(',');
                 this.genres.sort();
             }
 
@@ -165,9 +165,10 @@ let personalMovieDB = {
 //     }
 // }
 
-personalMovieDB.start();
-personalMovieDB.checkUserMovies();
+// personalMovieDB.start();
+// personalMovieDB.checkUserMovies();
 personalMovieDB.writeYourGenres();
-personalMovieDB.userLevel();
+// personalMovieDB.userLevel();
 // personalMovieDB.toggleVisibleMyDb();
 personalMovieDB.showMyDB(personalMovieDB.privat);
+
