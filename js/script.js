@@ -21,12 +21,15 @@ let btns = document.querySelectorAll('.first button'),
 //     }
 // });
 
-wrapper.addEventListener('click', (e) => {
-    // if (e.target && e.target.tagName == 'BUTTON') {
-    //     console.log('Hello');
-    // }
-    if (e.target && e.target.classList.contains('red')) {
-        console.log('Hello');
-    }
-    // console.dir(e.target);
-})
+// wrapper.addEventListener('click', (e) => {
+//     if (e.target && e.target.tagName == 'BUTTON') {
+//         console.log('Hello');
+//     }
+//     if (e.target && e.target.classList.contains('red')) {
+//         console.log('Hello');
+//     }
+//     if (e.target && e.target.matches('button.red')) {
+//         console.log('Hello');
+//     }
+//     console.dir(e.target);
+// })
