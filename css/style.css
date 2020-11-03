@@ -139,8 +139,13 @@ button {
   margin-top: 10px;
   border: none;
   border-radius: 8px;
-  color: #fff;
+  color: black;
   cursor: pointer;
   outline: none;
   margin-bottom: 30px;
+}
+
+#current {
+  width: 300px;
+  height: 300px;
 }
