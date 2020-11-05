@@ -20,7 +20,7 @@
 
 // showThis(4, 5);
 
-// методы объектов. контекст - облегчение работы с Объектаим
+// методы объектов. контекст - облегчение работы с Объектами
 
 // const obj = {
 //     a: 20,
@@ -65,8 +65,8 @@
 // sayName.call(user, 'Smith');
 // // Разница передалчи переменных в массиве для apply
 // sayName.apply(user, ['Smith']);
-// // Создает новую функцию
 
+// // Создает новую функцию
 // function count(num) {
 //     return this * num;
 // }
@@ -89,7 +89,7 @@ btn.addEventListener('click', function () {
 const obj = {
     num: 5,
     sayNumber() {
-        // Берем контекст от от функции - метода sayNumber которая указывает на объект obj
+        // Берем контекст от функции - метода sayNumber которая указывает на объект obj
         const say = () => {
             console.log(this.num);
         };
