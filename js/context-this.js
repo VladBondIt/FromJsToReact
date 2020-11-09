@@ -66,11 +66,11 @@
 // // Разница передалчи переменных в массиве для apply
 // sayName.apply(user, ['Smith']);
 
-// // Создает новую функцию
 // function count(num) {
 //     return this * num;
 // }
-// // Двойка это this 
+// Двойка это this 
+// Создает новую функцию
 // const double = count.bind(2);
 
 // console.log(double(3));

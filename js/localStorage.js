@@ -45,7 +45,7 @@ change.addEventListener('click', () => {
 const person = {
     name: 'Alex',
     age: 25
-}
+};
 
 const serializedPerson = JSON.stringify(person);
 // localStorage.setItem('Alex', serializedPerson);
