@@ -14,4 +14,4 @@ function loadScript(src) {
     document.body.append(script);
 }
 
-loadScript('js/reduce.js')
+loadScript('js/reduce.js');
