@@ -31,7 +31,7 @@ console.log(str.match(/\D/ig).join(''));
 // \S
 
 // \d ищем цифры 
-// \s ищем все буквы
+// \w ищем все буквы
 // \s ищем все пробелы
 
 // console.log(ans.search(reg)); //false = -1

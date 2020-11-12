@@ -32,4 +32,4 @@
 
 // let end = new Date();
 
-// console.log(`Цикл отработал зв ${end - start} милисекунд`);
+// console.log(`Цикл отработал зa ${end - start} милисекунд`);

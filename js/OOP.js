@@ -22,9 +22,9 @@ const john = Object.create(soldier);
 //     health: 100
 // };
 
-// john.__proto__ = soldier;
+john.__proto__ = soldier;
 
-// console.log(john.armour);
+console.log(john.armour);
 
 
 // Object.setPrototypeOf(john, soldier);

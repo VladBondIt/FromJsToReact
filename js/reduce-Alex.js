@@ -2,11 +2,11 @@
 
 let a = [1, 2, 14, 5, 8, 17, 2, 15];
 
-let b = a.reduce((zero, item) => {
-    if (zero < item) {
+let b = a.reduce((prev, item) => {
+    if (prev < item) {
         return item;
     } else {
-        return zero;
+        return prev;
     }
 });
 
