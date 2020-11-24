@@ -37,9 +37,9 @@ let d = a.reduce((prev, item, index) => {
 }, [0, a[0]]);
 
 console.log(d);
-// let flat = [].concat(...data);
 
 const data = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+// let flat = [].concat(...data);
 
 const flat = data.reduce((prev, item) => {
     return prev.concat(item);
