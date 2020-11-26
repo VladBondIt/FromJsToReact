@@ -4,11 +4,14 @@
 function sum(num) {
     console.log(num);
     return function (x) {
-        console.log(num + x);
+        const z = num + x
+        console.log(z);
         return function (c) {
-            return console.log((num + x) + c);
-        }
+            const b = z + c
+            console.log(b);
+        };
     }
 }
 
 sum(1)(2)(3);
+
