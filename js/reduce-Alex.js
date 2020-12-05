@@ -54,3 +54,12 @@ arr.sort(compareNum);
 function compareNum(a, b) {
     return a - b;
 }
+
+let arr2 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+
+arr2.forEach((item, i) => {
+    arr2 = arr2.concat(item);
+    arr2.splice(0, i);
+});
+
+console.log(arr2);
