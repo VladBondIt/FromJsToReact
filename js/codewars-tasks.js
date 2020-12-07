@@ -94,6 +94,10 @@ const findUniq = (arr) => arr.find(x => arr.indexOf(x) === arr.lastIndexOf(x));
 
 console.log(findUniq([1, 1, 1, 2, 1, 1]));
 
+const findUniqChar = (str) => [...str].find(x => str.indexOf(x) === str.lastIndexOf(x));
+
+console.log(findUniqChar('moonmeno'));
+
 function solution(str) {
     if (str === '') {
         return [];
@@ -129,7 +133,7 @@ function solution(str) {
 
 function solution(str) {
     let arr = [];
-    for (var i = 0; i < str.length; i += 2) {
+    for (let i = 0; i < str.length; i += 2) {
         let second = str[i + 1] || '_';
         arr.push(str[i] + second);
     }
