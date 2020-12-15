@@ -33,8 +33,8 @@ function getPrime(num) {
             if (item % it === 0 && item !== it) {
                 temp.splice(i, 1);
             }
-        })
-    })
+        });
+    });
     for (let i = 0; i < temp.length; i++) {
         if (simpleNum(temp[i])) {
             res.push(temp[i]);

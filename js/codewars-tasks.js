@@ -88,7 +88,7 @@ function findOutlier(integers) {
 
 console.log(findOutlier([[0, 2], [1], [0]]));
 
-// Первый уникальный лемент в массиве
+// Первый уникальный элемент в массиве
 
 const findUniq = (arr) => arr.find(x => arr.indexOf(x) === arr.lastIndexOf(x));
 
@@ -162,3 +162,65 @@ function anagramm(str, otherStr) {
 }
 
 console.log(anagramm('Friend', 'Finder'));
+
+
+// RGB ==> HEX
+
+function rgb(r, g, b) {
+    function check(x) {
+        if (x > 255) {
+            x = 255;
+        } else if (x < 0) {
+            x = 0;
+        }
+        // Переводим в шеснадцатеричную систему исчисления
+        const hex = x.toString(16);
+        return hex.length == 1 ? "0" + hex : hex;
+    }
+    r = check(r);
+    g = check(g);
+    b = check(b);
+
+    const res = (r + g + b).toUpperCase();
+
+    return res;
+}
+
+// Tower builnibg))
+
+function towerBuilder(nFloors) {
+    let tempFloor = nFloors;
+    let tower = [];
+    let res = [];
+
+    for (let i = 1; i <= nFloors; i++) {
+        tower.push(base(tempFloor));
+        tempFloor -= 1;
+    }
+
+    function base(numsOfStars) {
+        let x = (numsOfStars * 2) - 1;
+        let stars = '';
+        for (let i = 1; i <= x; i++) {
+            stars += '*';
+        }
+        return stars;
+    }
+
+    let numSpace = Math.floor(((nFloors * 2) - 1) / 2) + 1;
+    let numSpaceStart = numSpace - 1;
+    tower.reverse();
+
+    tower.forEach(item => {
+        let z = '';
+        let str = item.padEnd(numSpace);
+        let x = z.padStart(numSpaceStart);
+        res.push(x + str);
+        numSpaceStart--;
+        numSpace++;
+    });
+
+    return res;
+}
+
+console.log(towerBuilder(6));
