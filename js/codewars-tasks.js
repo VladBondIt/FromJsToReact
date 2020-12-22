@@ -224,3 +224,24 @@ function towerBuilder(nFloors) {
 }
 
 console.log(towerBuilder(6));
+
+
+// Check nums
+function checkNums() {
+
+    let res = [];
+
+    for (let i = 10100; i < 12000; i += 2) {
+
+        res.push(i);
+
+    }
+
+    res = res
+        .filter((x) => (x + '')[2] % 2 !== 0)
+        .filter((num) => [...(num + '')].reduce((prev, cur) => (+prev) + (+cur)) % 4 === 0);
+
+    return res;
+}
+
+console.log(checkNums());
