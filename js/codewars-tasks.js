@@ -245,3 +245,10 @@ function checkNums() {
 }
 
 console.log(checkNums());
+
+
+const lastDigit = function (str1, str2) {
+    return +str2 === 0 ? 1 : Math.pow(+str1.slice(-1), +str2.slice(-2) % 4 + 4) % 10;
+};
+
+console.log(lastDigit("1606938044258990275541962", "2037035976334486086268"));
