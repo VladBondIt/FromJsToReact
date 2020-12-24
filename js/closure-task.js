@@ -13,7 +13,17 @@
 //     }
 // }
 
-const sum = num => x => c => console.log(num, x, c, c + (x + num));
+const sum = n => x => c => console.log(n, x, c, c + (x + n));
 
 sum(1)(2)(3);
+
+function sum2(n) {
+    console.log(n);
+    return (b) => {
+        return sum2(n + b);
+    };
+}
+
+sum2(1)(2)(3)(6)(22);
+
 
