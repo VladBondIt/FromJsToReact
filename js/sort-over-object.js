@@ -22,3 +22,18 @@ let uniqClassNames = Object.entries(classNamesCount)
 
 
 console.log(uniqClassNames);
+
+
+let classNames = [
+    'header', 'menu', 'menu-item', 'menu-item', 'menu-item', 'footer', 'menu', 'link', 'link', 'link', 'link'
+];
+
+let uniqueNames = [];
+
+classNames.forEach(item => {
+    if (!uniqueNames.includes(item)) {
+        uniqueNames.push(item)
+    }
+});
+
+console.log(uniqueNames);

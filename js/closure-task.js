@@ -27,3 +27,16 @@ function sum2(n) {
 sum2(1)(2)(3)(6)(22);
 
 
+function add(n) {
+    const fn = function (x) {
+        return add(n + x);
+    };
+
+    fn.valueOf = function () {
+        return n;
+    };
+
+    return fn;
+}
+
+

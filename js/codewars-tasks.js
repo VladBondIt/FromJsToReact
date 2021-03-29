@@ -252,3 +252,30 @@ const lastDigit = function (str1, str2) {
 };
 
 console.log(lastDigit("1606938044258990275541962", "2037035976334486086268"));
+
+
+function generateHashtag(str) {
+    console.log(str.length);
+
+    if (str.trim() === '') {
+        return false;
+    }
+
+    const result = str.split(' ').reduce((previousValue, currentValue, currentIndex) => {
+        if (currentIndex === 0) {
+            previousValue.push('#')
+        }
+        if (currentValue !== '') {
+            previousValue
+                .push([...currentValue]
+                    .map((char, index) => index === 0
+                        ? char.toUpperCase()
+                        : char).join(''))
+        }
+        return previousValue
+    }, []).join('');
+
+    return result.length <= 140 ? result : false
+}
+
+generateHashtag("#A" + "a".repeat(138))
