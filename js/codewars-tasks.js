@@ -331,3 +331,80 @@ function ipsBetween(start, end) {
 }
 
 console.log(ipsBetween('1.2.3.4', '5.6.7.8'))
+
+function domainName(url) {
+
+    function trimWww(str) {
+        let temp = '';
+        str.split('.').forEach((value, index) => {
+            console.log(value)
+            if (index === 0 && value !== 'www') {
+                temp = value
+                console.log(temp)
+            }
+            if (temp === '' && index === 1) {
+                console.log("rewrite")
+                temp = value
+            }                      
+        })
+        return temp;
+    }
+    if (url[0]!=='h') {
+        return trimWww(url)
+    } else {   
+        return url.split('/').reduce((acc, curr, i) => {
+            if (i === 2) {
+                acc = trimWww(curr)
+            }
+            return acc
+        }, '')
+    }
+}
+
+// domainName("http://github.com/carbonfive/raygun")
+console.log(domainName("http://google.com"))
+// domainName("http://www.zombie-bites.com")
+// domainName("https://www.cnet.com")
+
+function score(dice) {
+    let rules = {
+        1: { count: 0, prize: { points: 1000, have: false, other: true } },
+        6: { count: 0, prize: { points: 600, have: false } },
+        5: { count: 0, prize: { points: 500, have: false, other: true } },
+        4: { count: 0, prize: { points: 400, have: false } },
+        3: { count: 0, prize: { points: 300, have: false } },
+        2: { count: 0, prize: { points: 200, have: false } },
+    }
+
+    dice.forEach(element => {
+        rules[element].count += 1
+    });
+
+    function checkOthers(diceNum) {
+        const points = diceNum == 1 ? 100 : 50
+        rules[diceNum].count >= 3
+            ? rules[diceNum].prize.other = points * (rules[diceNum].count - 3)
+            : rules[diceNum].prize.other = points * rules[diceNum].count
+    }
+
+    function checkMainPrize(diceNum) {
+        rules[diceNum].count >= 3 ? rules[diceNum].prize.have = true : rules[diceNum].prize.have = false
+    }
+
+    return Object.keys(rules).reduce((acc, curr) => {
+        checkMainPrize(curr)
+        if (rules[curr].prize.have) {
+            acc += rules[curr].prize.points
+        }
+        if (rules[curr].prize.other) {
+            checkOthers(curr)
+            acc += rules[curr].prize.other
+        }
+
+        return acc;
+    }, 0)
+}
+
+console.log(score([ 1, 1, 1, 3, 3 ]))
+
+// [4, 4, 4, 3, 3]
